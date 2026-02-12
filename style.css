@@ -1,0 +1,174 @@
+
+.bg-image {
+    position: fixed;
+    inset: 0;
+    background: url("https://img.freepik.com/premium-vector/fitness-background-realistic-style_98292-40475.jpg?w=740") center/cover no-repeat;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 14px;
+    border: none;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.calculator-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.calculator-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+}
+
+.form-group input,
+.form-group select {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+}
+
+.icon {
+    margin-right: 8px;
+    color: #1db954;
+}
+
+.calc-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.result-box {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f4f6f8;
+    border-radius: 12px;
+}
+
+/* QR */
+.qr-card {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    width: 260px;
+}
+
+.qr-image {
+    width: 150px;
+}
+
+.qr-text {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*  Mobile Responsive Fix  */
+@media (max-width: 768px) {
+
+    .calculator-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .calculator-card {
+        width: 100%;
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .qr-card {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .qr-image {
+        width: 130px;
+    }
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
