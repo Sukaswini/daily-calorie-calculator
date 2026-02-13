@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Calorie Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-image"></div>
+    <div class="overlay"></div>
+
+    <!-- Theme Button -->
+    <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+
+    <div class="index-wrapper">
+
+        <!-- Calculator Card -->
+        <div class="index-card">
+            <h2>Daily Calorie Calculator</h2>
+            <p class="subtitle">Metric Units (cm & kg)</p>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <input type="number" id="age" placeholder="Age">
+                </div>
+
+                <div class="form-group">
+                    <i class="fa-solid fa-user"></i>
+                    <select id="gender">
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <i class="fa-solid fa-arrows-up-down"></i>
+                    <input type="number" id="height" placeholder="Height (cm)">
+                </div>
+
+                <div class="form-group">
+                    <i class="fa-solid fa-weight-scale"></i>
+                    <input type="number" id="weight" placeholder="Weight (kg)">
+                </div>
+
+                <div class="form-group">
+                    <i class="fa-solid fa-person-walking"></i>
+                    <select id="activity">
+                        <option value="1.2">Sedentary</option>
+                        <option value="1.375">Light Activity</option>
+                        <option value="1.55">Moderate Activity</option>
+                        <option value="1.725">Very Active</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <i class="fa-solid fa-flag"></i>
+                    <select id="goal">
+                        <option value="maintain">Maintain Weight</option>
+                        <option value="lose">Lose Weight</option>
+                        <option value="gain">Gain Weight</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Calculate Button -->
+            <button class="calc-btn" onclick="calculateCalories()">
+                Calculate Calories
+            </button>
+
+            <!-- Result -->
+            <div class="result-box">
+                <p id="resultText">Your result will appear here</p>
+            </div>
+        </div>
+
+        <!-- QR Card -->
+        <div class="qr-card">
+            <img src="./QR-code.png" class="qr-image" alt="QR Code">
+            <p class="qr-text">
+                Scan or upload this QR code using the WhatsApp camera to join the group
+            </p>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
